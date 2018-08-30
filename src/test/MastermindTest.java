@@ -13,8 +13,21 @@ public class MastermindTest {
         * Test that given an input for RBG and guess of RGB the return is 1 exact
         * match
         * */
-        String value = "RBG";
-        String guess ="RGB";
-        assertEquals(1, MasterMind.exactMatches(value, guess));
+        String masterCode = "RBG";
+        String guess = "RGB";
+
+        int result = MasterMind.exactMatches(masterCode, guess);
+        int expected = 1;
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void secondTest() {
+        String masterCode = "RBG";
+        String guess = "RBB";
+
+        int result = MasterMind.exactMatches(masterCode, guess);
+        int expected = 2;
+        assertEquals(expected, result);
     }
 }
