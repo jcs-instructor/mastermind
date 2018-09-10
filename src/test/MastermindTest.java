@@ -58,6 +58,16 @@ public class MastermindTest {
 
     }
 
+    @Test
+    void invalidLengthGuessExceptionTest() {
+        String masterCode = "BBB";
+        String guess = "RRRR";
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    MasterMind.calculateExactMatches(masterCode, guess);
+                });
+
+    }
 //    @Test
 //    void firstInexactTest() {
 //        String masterCode = "RBG";

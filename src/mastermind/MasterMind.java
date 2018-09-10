@@ -4,9 +4,7 @@ public class MasterMind
 {
     public static int calculateExactMatches(String masterCode, String guess) throws IllegalArgumentException
     {
-        if(guess == null){
-            throw new IllegalArgumentException();
-        }
+        ValidateParameters(guess);
 
         int result = 0;
         char[] valueArray = masterCode.toCharArray();
@@ -18,6 +16,12 @@ public class MasterMind
             }
         }
         return result;
+    }
+
+    private static void ValidateParameters(String code) {
+        if(code == null || code.length() != 3){
+            throw new IllegalArgumentException();
+        }
     }
 
 //    public static int calculateInexactMatches(String masterCode, String guess) {
