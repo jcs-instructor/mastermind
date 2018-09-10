@@ -2,8 +2,12 @@ package mastermind;
 
 public class MasterMind
 {
-    public static int calculateExactMatches(String masterCode, String guess)
+    public static int calculateExactMatches(String masterCode, String guess) throws IllegalArgumentException
     {
+        if(guess == null){
+            throw new IllegalArgumentException();
+        }
+
         int result = 0;
         char[] valueArray = masterCode.toCharArray();
         char[] guessArray = guess.toCharArray();

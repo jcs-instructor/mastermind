@@ -47,6 +47,18 @@ public class MastermindTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    void matchExactNullTest() {
+        String masterCode = "BBB";
+        String guess = null;
+
+
+        int expected = 3;
+        assertThrows(IllegalArgumentException.class,
+                ()->{int result = MasterMind.calculateExactMatches(masterCode, guess);
+                    assertEquals(expected, result); });
+
+    }
 
 //    @Test
 //    void firstInexactTest() {
