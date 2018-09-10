@@ -16,7 +16,23 @@ public class MasterMind
         return result;
     }
 
-    public static int calculateInexactMatches(String masterCode, String guess) {
-        return 2;
-    }
+//    public static int calculateInexactMatches(String masterCode, String guess) {
+//        int result = 0;
+//        char[] valueArray = masterCode.toCharArray();
+//        char[] guessArray = guess.toCharArray();
+//
+//        for (int i = 0; i < guessArray.length; i++)
+//        {
+//
+//
+//            for (int j = 0; j < valueArray.length; j++) {
+//                if (i==j) {
+//                   if (valueArray[j] == guessArray[i]) {
+//                       result++;
+//                   }
+//            }
+//
+//        }
+//        return result;
+//    }
 }
