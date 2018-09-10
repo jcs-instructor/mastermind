@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MastermindTest {
 
     @Test
-    void firstTest() {
+    void matchExact1Test() {
         String masterCode = "RBG";
         String guess = "RGB";
 
@@ -18,12 +18,22 @@ public class MastermindTest {
     }
 
     @Test
-    void secondTest() {
+    void matchExact2Test() {
         String masterCode = "RBG";
         String guess = "RBB";
 
         int result = MasterMind.calculateExactMatches(masterCode, guess);
         int expected = 2;
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void matchExact3Test() {
+        String masterCode = "BBB";
+        String guess = "BBB";
+
+        int result = MasterMind.calculateExactMatches(masterCode, guess);
+        int expected = 3;
         assertEquals(expected, result);
     }
 
