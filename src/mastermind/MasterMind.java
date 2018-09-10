@@ -5,6 +5,7 @@ public class MasterMind
     public static int calculateExactMatches(String masterCode, String guess) throws IllegalArgumentException
     {
         ValidateParameters(guess);
+        ValidateParameters(masterCode);
 
         int result = 0;
         char[] valueArray = masterCode.toCharArray();

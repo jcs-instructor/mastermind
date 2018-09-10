@@ -68,6 +68,28 @@ public class MastermindTest {
                 });
 
     }
+
+    @Test
+    void matchExactNullMasterCodeExceptionTest() {
+        String masterCode = null;
+        String guess = "BBB";
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    MasterMind.calculateExactMatches(masterCode, guess);
+                });
+
+    }
+
+    @Test
+    void invalidLengthMasterCodeExceptionTest() {
+        String masterCode = "BBBB";
+        String guess = "RRR";
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    MasterMind.calculateExactMatches(masterCode, guess);
+                });
+
+    }
 //    @Test
 //    void firstInexactTest() {
 //        String masterCode = "RBG";
