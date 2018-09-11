@@ -92,6 +92,16 @@ public class MastermindTest {
     }
 
 
+    @Test
+    void invalidCodeContentTest() {
+        String masterCode = "BBB";
+        String guess = "RR3";
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    MasterMind.calculateExactMatches(masterCode, guess);
+                });
+
+    }
 
 
 

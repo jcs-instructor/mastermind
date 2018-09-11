@@ -23,6 +23,9 @@ public class MasterMind
         if(code == null || code.length() != 3){
             throw new IllegalArgumentException("Code length must be exactly 3 (example: RGB)");
         }
+        if(!code.matches("^[RGB]{3}$")){
+            throw new IllegalArgumentException("Code must contain valid colors R G B  (example: RGB)");
+        }
     }
 
 //    public static int calculateInexactMatches(String masterCode, String guess) {
