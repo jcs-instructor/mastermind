@@ -21,7 +21,7 @@ public class MasterMind
 
     private static void validateParameter(String code) {
         if(code == null || code.length() != 3){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Code length must be exactly 3 (example: RGB)");
         }
     }
 
