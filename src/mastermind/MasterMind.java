@@ -2,6 +2,8 @@ package mastermind;
 
 public class MasterMind
 {
+    private static final String colorCheck = "^[RGB]{3}$";
+
     public static int calculateExactMatches(String masterCode, String guess) throws IllegalArgumentException
     {
         validateParameter(guess);
@@ -23,7 +25,7 @@ public class MasterMind
         if(code == null || code.length() != 3){
             throw new IllegalArgumentException("Code length must be exactly 3 (example: RGB)");
         }
-        if(!code.matches("^[RGB]{3}$")){
+        if(!code.matches(colorCheck)){
             throw new IllegalArgumentException("Code must contain valid colors R G B  (example: RGB)");
         }
     }
